@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<h1>Update <%= selectedDog[0].name %><h1>
+    <form action="/updateDog/<%=selectedDog[0]._id %>?_method=PUT" method="POST">
+        <input type="text" name="name" placeholder="Name" value="<%= selectedDog[0].name %>">
+        <input type="text" name="starts" placeholder="Starts" value="<%= selectedDog[0].starts %>">
+        <input type="text" name="stakes" placeholder="Stakes" value="<%= selectedDog[0].stakes %>">
+        <input type="text" name="firsts" placeholder="Firsts" value="<%= selectedDog[0].firsts %>">
+        <input type="text" name="seconds" placeholder="Seconds" value="<%= selectedDog[0].seconds %>">
+        <input type="text" name="thirds" placeholder="Seconds" value="<%= selectedDog[0].thirds %>">
+        <input type="submit" value="SUBMIT">
+    </form>
+
+<%- include('partials/footer') %>

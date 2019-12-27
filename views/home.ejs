@@ -1,0 +1,241 @@
+
+<%- include('partials/header') %>
+
+    <% let totalStakes = 0 %>
+    <% let totalFirsts = 0 %>
+    <% let totalSeconds = 0 %>
+    <% let totalThirds = 0 %>
+    <% let totalStarts = 0 %>
+    <% let totalWinPlace = 0 %>
+    <% let syndicateStakes = 0 %>
+    <% let percentPlace = 0 %>
+    <% let breakEven %>
+    <% let dogsNames = [] %>
+    <% let wins = [] %>
+    <% let winsPercent = [] %>
+    <% let places = [] %>
+    <% let placesPercent = [] %>
+    <% let stakes = [] %>
+    <% let stakesPerRace = [] %>
+    
+    <% dogs.forEach(dog => {
+        totalStakes = totalStakes + dog.stakes
+        totalFirsts = totalFirsts + dog.firsts
+        totalSeconds = totalSeconds + dog.seconds
+        totalThirds = totalThirds + dog.thirds
+        totalStarts = totalStarts + dog.starts
+        dogsNames.push(dog.name)
+        wins.push(dog.firsts)
+        winsPercent.push(((dog.firsts/dog.starts)*100).toFixed(1))
+        places.push(dog.seconds + dog.thirds)
+        placesPercent.push((((dog.seconds + dog.thirds)/dog.starts)*100).toFixed(1))
+        stakes.push(dog.stakes)
+        stakesPerRace.push((dog.stakes/dog.starts).toFixed(1))
+    })%>
+    
+    <% breakEven = ((totalStakes/120000)*100).toFixed(1)%>
+    <% syndicateStakes = ((totalStakes * 0.05).toFixed(2))%>
+    <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
+    <%let pieData = [totalStakes, 120000-totalStakes] %>
+
+
+<div class="containerAll">
+<div class="banner">
+    <p style="margin-bottom: 20px; font-size: 3.5rem">Funky's Boys</p>
+    <img src="./Greyhound.png" class="logo"/>
+    <p style="margin-bottom: 20px; font-size: 2.5rem">Greyhound Racing Syndicate</p>
+</div>
+
+    <div class="boysdogsList">
+        
+        <div class="boysList">
+            <h3 style="color: steelblue"> The Boys</h3>
+            <ul>
+                <li>Mark (Funk)</li>
+                <li>Glenn</li>
+                <li>Mal</li>
+                <li>John</li>
+                <li>Tony</li>
+                <li>Duncs</li>
+                <li>Andrew (Ocker)</li>
+                <li>Doug</li>
+            </ul>
+            <p>Manager: Craig</p> 
+        </div>
+
+    
+
+        <div class="dogsContainer">
+            <h3 style="color: steelblue">The Dogs</h3>
+            <div class="table-responsive" style="margin-bottom:15px">
+                <table class="table table-sm">
+                    <thead>
+                    <tr>
+                        <th class="text-center">NAME</th>
+                        <th class="text-center">STARTS</th>
+                        <th class="text-center">FIRSTS</th>
+                        <th class="text-center">SECONDS</th>
+                        <th class="text-center">THIRDS</th>
+                        <th class="text-center">STAKES ($)</th>
+                        <th class="text-center">% WIN OR PLACE<th> 
+                    </tr>
+                </thead>
+                <tbody>
+                <% dogs.forEach(dog => { %>      
+                <% percentPlace = (((dog.firsts+dog.seconds+dog.thirds)/dog.starts)*100).toFixed(0)%>
+                    <tr>
+                        <th><%= dog.name %></td>
+                        <td class="text-center"><%= dog.starts %></td>
+                        <td class="text-center"><%= dog.firsts %></td>
+                        <td class="text-center"><%= dog.seconds %></td>
+                        <td class="text-center"><%= dog.thirds %></td>
+                        <td class="text-center"><%= dog.stakes %></td>
+                        <td class="text-center"><%= percentPlace %></td>
+                    <tr>
+                     <% }) %>
+                        <tr>
+                        <th>Totals</th>
+                        <th class="text-center"><%= totalStarts %></th>
+                        <th class="text-center"><%= totalFirsts %></th>
+                        <th class="text-center"><%= totalSeconds %></th>
+                        <th class="text-center"><%= totalThirds %></th>
+                        <th class="text-center"><%= totalStakes %></th>
+                        <th class="text-center"><%= totalWinPlace %></th>
+                     </tr>
+                </tbody>
+                </table>
+            </div>
+            <p style="color:grey; margin-bottom:5px">For more details on dogs click <a href="https://www.grnz.co.nz/greyhounds/profiles.aspx">here</a> (GRNZ site) and enter dogs name.</p>
+            <p style="color:lightgrey; ; margin-bottom:0">Note: Fools Russian is "Fool's Russian" and Sub 23 is "Sub Twenty Three"</p>
+        </div>
+    </div>
+    
+    <hr class="rule">
+    
+    <div class="datasummary-container">
+        <h3 style="color: steelblue">THE STATS<h3>
+    </div>
+
+    <div class="dataSummary">
+        
+        <div class="graphSectionHeadPie">
+        <h4>Stakes</h4>
+        </div>
+        <div class="graphGroupPie">
+            <div class="stakesInfo">
+                <h3>Total: $<%= totalStakes %><h3>
+                <h3>Syndicate (5%): $<%= syndicateStakes %><h3>
+            </div>
+            <div class="graph">
+                <h5>Break-even: <%= breakEven %>% </h5>
+                <div id="chart7" class="ct-chart7"></div> 
+            </div>
+        </div>
+
+        <div class="graphSectionHead">
+            <h4>Wins</h4>
+        </div>
+        <div class="graphGroups">
+
+            <div class="graph">
+                <h5>Wins Total</h5>
+                <div id="chart1" class="ct-chart1"></div> 
+            </div>
+            <div class="graph">
+                <h5>Wins Percent</h5>
+                <div id="chart2" class="ct-chart2"></div> 
+            </div>
+        </div>
+        
+        <div class="graphSectionHead">
+            <h4>Places</h4>
+        </div>
+        <div class="graphGroups">
+            <div class="graph">
+                <h5>Places Total</h5>
+                <div id="chart3" class="ct-chart3"></div> 
+            </div>
+            <div class="graph">
+                <h5>Places Percent</h5>
+                <div id="chart4" class="ct-chart4"></div> 
+            </div>
+        </div>
+        
+        <div class="graphSectionHead">
+            <h4>Stakes</h4>
+        </div>
+        <div class="graphGroups">
+            <div class="graph">
+                <h5>Stakes Total</h5>
+                <div id="chart5" class="ct-chart5"></div> 
+            </div>
+            <div class="graph">
+                <h5>Average Stakes Per Race</h5>
+                <div id="chart6" class="ct-chart6"></div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<% let dataseries1 = {labels: dogsNames, series: [wins]}
+%>
+
+<% let series1 = JSON.stringify(dataseries1).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries2 = {labels: dogsNames, series: [winsPercent]}
+%>
+
+<% let series2 = JSON.stringify(dataseries2).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries3 = {labels: dogsNames, series: [places]}
+%>
+
+<% let series3 = JSON.stringify(dataseries3).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries4 = {labels: dogsNames, series: [placesPercent]}
+%>
+
+<% let series4 = JSON.stringify(dataseries4).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries5 = {labels: dogsNames, series: [stakes]}
+%>
+
+<% let series5 = JSON.stringify(dataseries5).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries6 = {labels: dogsNames, series: [stakesPerRace]}
+%>
+
+<% let series6 = JSON.stringify(dataseries6).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% let dataseries7 = {series: pieData} 
+%>
+
+<% var data7options = {labelOffset: 17}
+%>
+
+<% let series7 = JSON.stringify(dataseries7).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+<% var options7 = JSON.stringify(data7options).replace(/"(\w+)"\s*:/g, '$1:')
+%>
+
+
+
+    <script>
+        new Chartist.Bar('.ct-chart1', <%- series1 %>)
+        new Chartist.Bar('.ct-chart2', <%- series2 %>)  
+        new Chartist.Bar('.ct-chart3',<%- series3 %>)
+        new Chartist.Bar('.ct-chart4',<%- series4 %>) 
+        new Chartist.Bar('.ct-chart5',<%- series5 %>) 
+        new Chartist.Bar('.ct-chart6',<%- series6 %>)    
+        new Chartist.Pie('.ct-chart7', <%- series7 %>, <%- options7 %>)  
+    </script>
+
+</div>
+<%- include('partials/footer') %>

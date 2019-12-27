@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+
+
+<h1>What do you want to do:</h1>
+
+<h3>Create a new dog?</h3>
+<form action="/create" method="POST">
+    <button type="submit">CREATE</button>
+</form>
+
+
+<h2>Update a dog?</h2>
+            <form action="/selectDog" method="POST"%>>  
+                <select class="" name="name">
+                    <option hidden="">Select A Dog!</option>
+                    <% allDogs.forEach(dog => {%>
+                    <option value="<%= dog.name %>">
+                        <%= dog.name %>
+                    </option>
+                <% }); %>
+                </select>
+                <input type="submit" value="SUBMIT">
+            </div>
+
+
+<%- include('partials/footer') %>

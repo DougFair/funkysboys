@@ -1,0 +1,185 @@
+.containerAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    height:auto;
+    width: 30%;
+}
+
+table {
+    font-size: 0.8rem;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(134, 194, 134);
+    color:rgb(221, 70, 70);
+    height: auto;
+    width: 100%;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.boysdogsList {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0 10px 0
+}
+
+.boysList {
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: flex-start;
+    margin-left: 2%;
+    flex-wrap: wrap;
+}
+
+.dogsContainer {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.rule {
+    width: 90%;
+    border: 1px solid lightgrey;
+    margin: 10px 0
+}
+
+.datasummary-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 9px 0 3px 0;
+}
+
+.dataSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.stakesInfo {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.graphGroups {
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    height: 240px;
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+.graphGroupPie {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+}
+
+ .graphSectionHead {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     width: 100%;
+     color: steelblue
+ }
+
+ .graphSectionHeadPie {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%; 
+    color: steelblue  
+}
+
+#chart1 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#chart2 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#chart3 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+#chart4 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#chart5 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+#chart6 {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+
+#chart1 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+    margin-bottom: 200px;
+}
+
+#chart2 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+}
+
+#chart3 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+}
+
+#chart4 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+}
+
+#chart5 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+}
+
+#chart6 .ct-series-a .ct-bar {
+    stroke: rgb(134, 194, 134);
+    stroke-width: 30px;
+}
+
