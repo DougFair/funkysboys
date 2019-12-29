@@ -22,7 +22,7 @@ table {
     background-color: rgb(134, 194, 134);
     color:rgb(221, 70, 70);
     height: auto;
-    width: 100%;
+    width: auto;
     font-family: 'Racing Sans One', cursive;
 }
 
@@ -55,10 +55,22 @@ table {
     max-width: 500px;
     margin: 0 2%;
     }
-    .bannerSubHeading {
+    /* .bannerSubHeading {
         font-size: 2.3rem;
+    } */
+  }
+
+  @media screen and (max-width: 550px) {
+    .bannerSubHeading {
+        font-size: 1.8rem;
+    }
+    .bannerHeading {
+        font-size: 2.5rem;
     }
   }
+
+
+
 
 .boysList {
     display:flex;
