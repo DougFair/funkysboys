@@ -31,8 +31,15 @@ table {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 30px 0 10px 0
+    margin: 30px 0 10px 0;
+    /* min-width: 500px; */
+    /* flex-wrap: wrap; */
 }
+@media screen and (max-width: 750px) {
+    .boysdogsList {
+      flex-wrap: wrap;
+    }
+  }
 
 .boysList {
     display:flex;
@@ -40,7 +47,7 @@ table {
     width: 30%;
     align-items: flex-start;
     margin-left: 2%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .dogsContainer {
@@ -48,6 +55,8 @@ table {
     flex-direction: column;
     width: 100%;
     padding: 0 10px;
+    min-width: 500px;
+    flex-wrap: wrap;
 }
 
 .rule {
