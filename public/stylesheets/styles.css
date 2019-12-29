@@ -174,7 +174,8 @@ table {
      flex-direction: column;
      justify-content: flex-start;
      width: 100%;
-     color: steelblue
+     color: steelblue;
+     margin-left: 20px;
  }
 
  .graphSectionHeadPie {
