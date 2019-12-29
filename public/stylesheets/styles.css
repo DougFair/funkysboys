@@ -26,6 +26,20 @@ table {
     font-family: 'Racing Sans One', cursive;
 }
 
+.bannerHeading {
+    margin-bottom: 20px; 
+    font-size: 3.5rem
+} 
+
+.bannerSubHeading {
+    margin-bottom: 20px; 
+    font-size: 5rem,
+}
+
+.bannerSubHeading {
+    font-size: 2.5rem;
+}
+
 .boysdogsList {
     display:flex;
     flex-direction: row;
@@ -40,6 +54,9 @@ table {
     .dogsContainer {
     max-width: 500px;
     margin: 0 2%;
+    }
+    .bannerSubHeading {
+        font-size: 2.3rem;
     }
   }
 
