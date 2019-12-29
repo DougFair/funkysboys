@@ -14,6 +14,14 @@ table {
     font-size: 0.8rem;
 }
 
+.NZTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 0;
+}
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -47,15 +55,6 @@ table {
     width: 100%;
     margin: 30px 0 10px 0;
 }
-/* @media screen and (max-width: 750px) {
-    .boysdogsList {
-      flex-wrap: wrap;
-    }
-    .dogsContainer {
-    max-width: 500px;
-    margin: 0 2%;
-    }
-  } */
 
   @media screen and (max-width: 550px) {
     .bannerSubHeading {
@@ -76,21 +75,25 @@ table {
         flex-wrap: wrap;
       }
       .dogsContainer {
-      max-width: 420px;
+      width: auto;
       margin: 0 2%;
       }
       .dataSummary {
         max-width: 600px;
       }
+      .boysList {
+        display:flex;
+        min-width: 50%;
+        margin-left: 0;
+        align-items:center;
+        }
   }
 
 .boysList {
     display:flex;
     flex-direction: column;
     width: 30%;
-    align-items: flex-start;
-    margin-left: 2%;
-    /* flex-wrap: wrap; */
+    align-items: center;
 }
 
 .dogsContainer {
@@ -98,8 +101,8 @@ table {
     flex-direction: column;
     width: 100%;
     padding: 0 10px;
-    /* min-width: 500px; */
     flex-wrap: wrap;
+    margin-left: 20px
 }
 
 .rule {

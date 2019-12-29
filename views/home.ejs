@@ -38,26 +38,35 @@
     <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
     <%let pieData = [totalStakes, 120000-totalStakes] %>
 
+<% let options = { hour: 'numeric', minute: '2-digit' } %>
+<% let newTime = new Date().toLocaleString("en-US", {timeZone: "Pacific/Auckland"}).slice(12).replace(/:\d{2}\s/,' ')
+%>
 
-<div class="containerAll">
 <div class="banner">
     <p class="bannerHeading">Funky's Boys</p>
     <img src="./Greyhound.png" class="logo"/>
     <p class="bannerSubHeading">Greyhound Racing Syndicate</p>
 </div>
 
+<div class="containerAll">
+
+<div class="NZTime">
+<p>Current time in Auckland: <%= newTime %></p>
+</div>
+
+
     <div class="boysdogsList">
         
         <div class="boysList">
             <h3 style="color: steelblue"> The Boys</h3>
             <ul>
-                <li>Mark (Funk)</li>
+                <li>Mark (Funky)</li>
                 <li>Glenn</li>
                 <li>Mal</li>
                 <li>John</li>
                 <li>Tony</li>
                 <li>Duncs</li>
-                <li>Andrew (Ocker)</li>
+                <li>Andrew</li>
                 <li>Doug</li>
             </ul>
             <p>Manager: Craig</p> 
@@ -105,6 +114,7 @@
             </div>
             <p style="color:grey; margin-bottom:5px">For more details on dogs click <a href="https://www.grnz.co.nz/greyhounds/profiles.aspx">here</a> (GRNZ site) and enter dogs name.</p>
             <p style="color:lightgrey; ; margin-bottom:0">Note: Fools Russian is "Fool's Russian" and Sub 23 is "Sub Twenty Three"</p>
+            <p style="color:grey; margin-bottom:5px">For upcoming race meets click <a href="https://www.grnz.co.nz/catch-the-action/fields.aspx">here</a>.</p>
         </div>
     </div>
     
