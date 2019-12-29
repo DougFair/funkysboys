@@ -128,7 +128,6 @@ table {
     justify-content: center;
     flex-wrap: wrap;
     margin-right: 0;
-    background-color: aqua;
 }
 
 .graphPie {
@@ -136,7 +135,6 @@ table {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-color: yellow;
     width: 200px;
 }
 
@@ -146,9 +144,7 @@ table {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    padding: 10px;
     flex-wrap: wrap;
-    background-color: red;
 }
 
 .graphGroupPie {
@@ -175,7 +171,7 @@ table {
      justify-content: flex-start;
      width: 100%;
      color: steelblue;
-     margin-left: 20px;
+     margin-left: 10px;
  }
 
  .graphSectionHeadPie {
@@ -183,13 +179,18 @@ table {
     flex-direction: row;
     justify-content: flex-start;
     width: 100%; 
-    color: steelblue  
+    color: steelblue;
+    margin-left: 10px;  
+}
+
+.graphSubSectionHead {
+    margin-left: 10px;
 }
 
 #chart1 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -197,7 +198,7 @@ table {
 #chart2 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -205,14 +206,14 @@ table {
 #chart3 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 #chart4 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -220,14 +221,14 @@ table {
 #chart5 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 #chart6 {
     width: 400px;
     height: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -236,7 +237,6 @@ table {
 #chart1 .ct-series-a .ct-bar {
     stroke: rgb(134, 194, 134);
     stroke-width: 30px;
-    margin-bottom: 200px;
 }
 
 #chart2 .ct-series-a .ct-bar {
