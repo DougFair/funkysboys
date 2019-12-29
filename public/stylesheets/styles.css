@@ -62,7 +62,7 @@ table {
 
   @media screen and (max-width: 550px) {
     .bannerSubHeading {
-        font-size: 1.0rem;
+        font-size: 1.5rem;
     }
     .bannerHeading {
         font-size: 2.5rem;
