@@ -27,12 +27,12 @@ table {
 }
 
 .bannerHeading {
-    margin-bottom: 20px; 
+    margin-bottom: 15px; 
     font-size: 3.5rem
 } 
 
 .bannerSubHeading {
-    margin-bottom: 20px; 
+    margin: 15px 0; 
     font-size: 5rem,
 }
 
@@ -47,7 +47,7 @@ table {
     width: 100%;
     margin: 30px 0 10px 0;
 }
-@media screen and (max-width: 750px) {
+/* @media screen and (max-width: 750px) {
     .boysdogsList {
       flex-wrap: wrap;
     }
@@ -55,10 +55,7 @@ table {
     max-width: 500px;
     margin: 0 2%;
     }
-    /* .bannerSubHeading {
-        font-size: 2.3rem;
-    } */
-  }
+  } */
 
   @media screen and (max-width: 550px) {
     .bannerSubHeading {
@@ -69,8 +66,23 @@ table {
     }
   }
 
-
-
+  @media screen and (max-width: 820px) {
+    .graphGroups {
+      flex-direction: column;
+      align-items: center;
+      width: 400px
+    }
+    .boysdogsList {
+        flex-wrap: wrap;
+      }
+      .dogsContainer {
+      max-width: 500px;
+      margin: 0 2%;
+      }
+      .dataSummary {
+        max-width: 600px;
+      }
+  }
 
 .boysList {
     display:flex;
@@ -96,44 +108,54 @@ table {
     margin: 10px 0
 }
 
-.datasummary-container {
-    display:flex;
-    flex-direction: row;
+.dataSummaryHeading {
     justify-content: center;
-    width: 95%;
     margin-bottom: 20px;
-    padding: 9px 0 3px 0;
+    color: steelblue
 }
 
 .dataSummary {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* max-width: 600px; */
 }
 
 .stakesInfo {
     display: flex;
     flex-direction: column; 
-    align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 0;
+    background-color: aqua;
 }
+
+.graphPie {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: yellow;
+    width: 200px;
+}
+
 
 .graphGroups {
     border: 1px solid lightgrey;
     display: flex;
     flex-direction: row;
-    height: 240px;
     margin-bottom: 20px;
-    padding: 10px
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: red;
 }
 
 .graphGroupPie {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
-    width: 100%;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .graph {
@@ -141,9 +163,15 @@ table {
     flex-direction: column;
 }
 
+
+.allGraphs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
  .graphSectionHead {
      display: flex;
-     flex-direction: row;
+     flex-direction: column;
      justify-content: flex-start;
      width: 100%;
      color: steelblue
@@ -161,34 +189,46 @@ table {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #chart2 {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #chart3 {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 #chart4 {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #chart5 {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 #chart6 {
     width: 400px;
     height: 200px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -222,4 +262,3 @@ table {
     stroke: rgb(134, 194, 134);
     stroke-width: 30px;
 }
-
