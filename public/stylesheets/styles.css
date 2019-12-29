@@ -39,6 +39,10 @@ table {
     .boysdogsList {
       flex-wrap: wrap;
     }
+    .dogsContainer {
+    max-width: 550px;
+    margin: 0 10%;
+    }
   }
 
 .boysList {
@@ -55,7 +59,7 @@ table {
     flex-direction: column;
     width: 100%;
     padding: 0 10px;
-    min-width: 500px;
+    /* min-width: 500px; */
     flex-wrap: wrap;
 }
 
