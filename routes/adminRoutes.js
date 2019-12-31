@@ -36,8 +36,9 @@ router.post("/selectDog", async (req,res,next)=> {
 })
 
 router.put("/updateDog/:id", async (req,res,next)=> {
-    const {name, starts, stakes, firsts, seconds, thirds} = req.body
+    const {name, starts, stakes, firsts, seconds, thirds, dateUpdated} = req.body
     const id = req.params.id
+    
     let updatedDog
     updatedDog = await Dog.findById(id)
 
@@ -47,7 +48,8 @@ router.put("/updateDog/:id", async (req,res,next)=> {
     updatedDog.firsts = firsts
     updatedDog.seconds = seconds
     updatedDog.thirds = thirds
-    
+    updatedDog.dateUpdated = dateUpdated
+
     await updatedDog.save()
     res.redirect("/admin")
 })

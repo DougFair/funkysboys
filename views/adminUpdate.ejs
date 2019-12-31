@@ -1,14 +1,54 @@
 <%- include('partials/header') %>
 
-<h1>Update <%= selectedDog[0].name %><h1>
-    <form action="/updateDog/<%=selectedDog[0]._id %>?_method=PUT" method="POST">
-        <input type="text" name="name" placeholder="Name" value="<%= selectedDog[0].name %>">
-        <input type="text" name="starts" placeholder="Starts" value="<%= selectedDog[0].starts %>">
-        <input type="text" name="stakes" placeholder="Stakes" value="<%= selectedDog[0].stakes %>">
-        <input type="text" name="firsts" placeholder="Firsts" value="<%= selectedDog[0].firsts %>">
-        <input type="text" name="seconds" placeholder="Seconds" value="<%= selectedDog[0].seconds %>">
-        <input type="text" name="thirds" placeholder="Seconds" value="<%= selectedDog[0].thirds %>">
-        <input type="submit" value="SUBMIT">
-    </form>
+<% let dateTime = new Date().toLocaleString("en-US", {timeZone: "Australia/Melbourne"}).split(" ") %>
+<% let mdy = dateTime[0]%>
+<% mdy = mdy.split('/'); %>
+<% let month = parseInt(mdy[0]) %>
+<% let day = parseInt(mdy[1])   %>
+<% let year = parseInt(mdy[2]) %>
+<% let date = `${day}/${month}/${year}`%>
 
+
+<div class="updateForm">
+    
+    <h2 style="margin-bottom: 20px">Update <%= selectedDog[0].name %></h2>
+    
+    <form action="/updateDog/<%=selectedDog[0]._id %>?_method=PUT" method="POST">
+        <div class="inputItem">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name" value="<%= selectedDog[0].name %>">
+        </div>  
+
+        <div class="inputItem">
+        <label for="name">Starts</label>       
+        <input type="text" name="starts" placeholder="Starts" value="<%= selectedDog[0].starts %>">
+        </div> 
+
+        <div class="inputItem">
+        <label for="name">Stakes</label>
+        <input type="text" name="stakes" placeholder="Stakes" value="<%= selectedDog[0].stakes %>">
+        </div> 
+
+        <div class="inputItem">
+        <label for="name">Firsts</label>
+        <input type="text" name="firsts" placeholder="Firsts" value="<%= selectedDog[0].firsts %>">
+        </div> 
+
+        <div class="inputItem">
+        <label for="name">Seconds</label>
+        <input type="text" name="seconds" placeholder="Seconds" value="<%= selectedDog[0].seconds %>">
+        </div> 
+
+        <div class="inputItem">
+        <label for="Thirds">Thirds</label>
+        <input type="text" name="thirds" placeholder="Seconds" value="<%= selectedDog[0].thirds %>">
+        </div>
+        
+        <input type="hidden" name="dateUpdated" value="<%= date %>">
+
+        <div class="inputItem">
+        <input type="submit" value="SUBMIT" class="submitButton">
+        </div> 
+    </form>
+</div>
 <%- include('partials/footer') %>

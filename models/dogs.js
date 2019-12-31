@@ -8,7 +8,8 @@ const dogSchema = new Schema({
     starts: Number,
     firsts: Number,
     seconds: Number,
-    thirds: Number
+    thirds: Number,
+    dateUpdated: String
 })
 
 module.exports = mongoose.model("Dog", dogSchema)

@@ -105,6 +105,12 @@ table {
     margin-left: 20px
 }
 
+.updatedDate {
+    color: grey;
+    size: 0.8rem;
+    margin: 0 0
+}
+
 .rule {
     width: 90%;
     border: 1px solid lightgrey;
@@ -265,4 +271,34 @@ table {
 #chart6 .ct-series-a .ct-bar {
     stroke: rgb(134, 194, 134);
     stroke-width: 30px;
+}
+
+.adminHomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-top:10%
+}
+
+.submitButton{
+    background-color: black;
+    margin-top: 15px;
+    width: 100px;
+    color:white;
+    height: 2rem
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 5%;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 5%;
 }

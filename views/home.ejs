@@ -1,6 +1,6 @@
 
-<%- include('partials/header') %>
-
+<%- include('partials/headerHome') %>
+    <% let dateUpdated = dogs[0].dateUpdated %>
     <% let totalStakes = 0 %>
     <% let totalFirsts = 0 %>
     <% let totalSeconds = 0 %>
@@ -74,6 +74,7 @@
 
         <div class="dogsContainer">
             <h3 style="color: steelblue">The Dogs</h3>
+            <p class="updatedDate">Updated: <%= dateUpdated %></p>
             <div class="table-responsive" style="margin-bottom:15px">
                 <table class="table table-sm">
                     <thead>

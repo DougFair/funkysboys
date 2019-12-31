@@ -1,16 +1,15 @@
 <%- include('partials/header') %>
 
 
+<div class="adminHomeContainer">
+        <h2 style="margin-bottom: 40px">Aministration Home</h2>
+        <h3>Create a new dog</h3>
+        <form action="/create" method="POST">
+            <button type="submit" class="submitButton">CREATE</button>
+        </form>
 
-<h1>What do you want to do:</h1>
-
-<h3>Create a new dog?</h3>
-<form action="/create" method="POST">
-    <button type="submit">CREATE</button>
-</form>
-
-
-<h2>Update a dog?</h2>
+        <div class="updateForm">
+            <h3>Update a dog</h3>
             <form action="/selectDog" method="POST"%>>  
                 <select class="" name="name">
                     <option hidden="">Select A Dog!</option>
@@ -20,8 +19,9 @@
                     </option>
                 <% }); %>
                 </select>
-                <input type="submit" value="SUBMIT">
-            </div>
-
+                <input type="submit" value="UPDATE" class="submitButton">
+            </form>
+        </div>
+</div>
 
 <%- include('partials/footer') %>

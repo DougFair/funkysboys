@@ -1,14 +1,41 @@
-
 <%- include('partials/header') %>
-<h1>Create a new dog:<h1>
-<form action="/createDog" method=POST>
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="starts" placeholder="Starts">
-    <input type="text" name="stakes" placeholder="Stakes">
-    <input type="text" name="firsts" placeholder="Firsts">
-    <input type="text" name="seconds" placeholder="Seconds">
-    <input type="text" name="thirds" placeholder="Seconds">
-    <input type="submit" value="SUBMIT">
-</form>
 
+<div class="createForm">
+    <h2>Create A New Dog</h2>
+        <form action="/createDog" method=POST>
+            <div class="inputItem">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Name">
+            </div>
+
+            <div class="inputItem">
+                <label for="name">Starts</label>
+                <input type="text" name="starts" placeholder="Starts">
+            </div>
+            
+            <div class="inputItem">
+                <label for="name">Stakes</label>
+                <input type="text" name="stakes" placeholder="Stakes">
+            </div>
+
+            <div class="inputItem">
+                <label for="name">Firsts</label>
+                <input type="text" name="firsts" placeholder="Firsts">
+            </div>
+
+            <div class="inputItem">
+                <label for="name">Seconds</label>
+                <input type="text" name="seconds" placeholder="Seconds">
+            </div>
+
+            <div class="inputItem">
+                <label for="Thirds">Thirds</label>
+                <input type="text" name="thirds" placeholder="Thirds">
+            </div>
+
+            <div class="inputItem">
+                <input type="submit" value="SUBMIT" class="submitButton">
+            </div>
+        </form>
+</div>
 <%- include('partials/footer') %>
