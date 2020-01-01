@@ -39,8 +39,8 @@
     <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
     <%let pieData = [syndicateStakes, 6000-syndicateStakes] %>
 
-<% let options = { hour: 'numeric', minute: '2-digit' } %>
-<% let newTime = new Date().toLocaleString("en-US", {timeZone: "Pacific/Auckland"}).slice(12).replace(/:\d{2}\s/,' ')
+<% let options = { timeZone: "Pacific/Auckland", hour: '2-digit', minute: '2-digit' } %>
+<% let newTime = new Date().toLocaleString("en-AU", options)
 %>
 
 <div class="banner">
@@ -52,7 +52,7 @@
 <div class="containerAll">
 
 <div class="NZTime">
-<p>Current time in Auckland: <%= newTime %></p>
+<p style="margin-right: 10px">Current time in Auckland: <%= newTime %></p>
 </div>
 
 
