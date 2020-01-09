@@ -1,4 +1,3 @@
-
 <%- include('partials/headerHome') %>
     <% let dateUpdated = dogs[0].dateUpdated %>
     <% let totalStakes = 0 %>
@@ -132,8 +131,8 @@
         </div>
         <div class="graphGroupPie">
             <div class="stakesInfo">
-                <h4>Total: $<%= totalStakes %><h4>
-                <h4>Syndicate: $<%= syndicateStakes %><h4>
+                <h4 class="stakesInfoText">Total: $<%= totalStakes %><h4>
+                <h4 class="stakesInfoText">Syndicate: $<%= syndicateStakes %><h4>
             </div>
             <div class="graphPie">
                 <h5>Break-even: <%= breakEven %>% </h5>

@@ -139,6 +139,16 @@ table {
     margin-right: 0;
 }
 
+.stakesInfoText {
+    font-size: 1.3rem;
+}
+
+/* @media (max-width: 385px) {
+    .stakesInfo {
+    font-size: 0.9rem;
+    }
+} */
+
 .graphPie {
     display: flex;
     flex-direction: column;
