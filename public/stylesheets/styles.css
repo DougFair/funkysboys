@@ -41,12 +41,10 @@ table {
 
 .bannerSubHeading {
     margin: 15px 0; 
-    font-size: 5rem,
-}
-
-.bannerSubHeading {
     font-size: 2.5rem;
 }
+
+
 
 .boysdogsList {
     display:flex;
@@ -64,6 +62,8 @@ table {
         font-size: 2.5rem;
     }
   }
+
+
 
   @media screen and (max-width: 820px) {
     .graphGroups {
@@ -143,6 +143,15 @@ table {
     font-size: 1.3rem;
 }
 
+@media screen and (max-width: 365px){
+    .bannerSubHeading {
+        font-size: 1.35rem;
+    }
+    .stakesInfoText {
+        font-size: 1.1rem;
+    }
+}
+
 .graphPie {
     display: flex;
     flex-direction: column;
@@ -151,6 +160,11 @@ table {
     width: 200px;
 }
 
+@media (max-width: 365px){
+    .graphPie {
+        width: 160px
+    }
+}
 
 .graphGroups {
     border: 1px solid lightgrey;
@@ -186,6 +200,8 @@ table {
      color: steelblue;
      margin-left: 20px;
  }
+
+
 
  .graphSectionHeadPie {
     display: flex;
@@ -244,6 +260,15 @@ table {
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (max-width: 365px){
+    .graphSubSectionHead {
+        margin-left: 45px;
+    }
+    .graphSectionHeadMain {
+        margin-left: 25px;
+    }
 }
 
 
