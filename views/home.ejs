@@ -38,8 +38,7 @@
         stakesPerRace.push((dog.stakes/dog.starts).toFixed(1))
     })%>
     
-    // <% breakEven = ((totalStakes/120000)*100).toFixed(1)%>
-    // <% syndicateStakes = ((totalStakes * 0.05).toFixed(0))%>
+   
     <% breakEven = ((syndicateStakes/9200)*100).toFixed(1)%>
     <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
     <%let pieData = [syndicateStakes, 9200-syndicateStakes] %>
