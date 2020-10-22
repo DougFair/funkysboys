@@ -17,8 +17,8 @@ app.use(adminRoutes)
 
 
 let PORT = process.env.PORT || 3000
-let url = process.env.MONGODB_URL
-
+// let url = process.env.MONGODB_URL
+let url = "mongodb+srv://doug:Clone13!@cluster0-mthbi.mongodb.net/dogs?retryWrites=true&w=majority"
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true  })
 .then (() =>{
 app.listen(PORT, ()=>

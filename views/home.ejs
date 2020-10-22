@@ -18,13 +18,16 @@
     <% let stakesPerRace = [] %>
     
     <% dogs.forEach(dog => {
-        
         totalStakes = totalStakes + dog.stakes
+        
         if(dog.name === "Bronski Beat"){
-            syndicateStakes = syndicateStakes + ((dog.stakes* 0.1).toFixed(0))
+            let calc = parseInt((dog.stakes* 0.1).toFixed(0))
+            syndicateStakes = syndicateStakes + calc
         } else {
-            syndicateStakes = syndicateStakes + ((dog.stakes* 0.05).toFixed(0))
+            let calc = parseInt((dog.stakes* 0.05).toFixed(0))
+            syndicateStakes = syndicateStakes + calc
         }
+
         totalFirsts = totalFirsts + dog.firsts
         totalSeconds = totalSeconds + dog.seconds
         totalThirds = totalThirds + dog.thirds
