@@ -34,9 +34,9 @@
     
     <% breakEven = ((totalStakes/120000)*100).toFixed(1)%>
     <% syndicateStakes = ((totalStakes * 0.05).toFixed(0))%>
-    <% breakEven = ((syndicateStakes/6000)*100).toFixed(1)%>
+    <% breakEven = ((syndicateStakes/9000)*100).toFixed(1)%>
     <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
-    <%let pieData = [syndicateStakes, 6000-syndicateStakes] %>
+    <%let pieData = [syndicateStakes, 9000-syndicateStakes] %>
 
 <% let options = { timeZone: "Pacific/Auckland", hour: '2-digit', minute: '2-digit' } %>
 <% let newTime = new Date().toLocaleString("en-AU", options)
