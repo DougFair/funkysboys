@@ -18,7 +18,13 @@
     <% let stakesPerRace = [] %>
     
     <% dogs.forEach(dog => {
+        
         totalStakes = totalStakes + dog.stakes
+        if(dog.name === "Bronski Beat"){
+            syndicateStakes = syndicateStakes + (dog.stakes* 0.1).toFixed(0)
+        } else {
+            syndicateStakes = syndicateStakes + (dog.stakes* 0.05).toFixed(0)
+        }
         totalFirsts = totalFirsts + dog.firsts
         totalSeconds = totalSeconds + dog.seconds
         totalThirds = totalThirds + dog.thirds
@@ -32,11 +38,11 @@
         stakesPerRace.push((dog.stakes/dog.starts).toFixed(1))
     })%>
     
-    <% breakEven = ((totalStakes/120000)*100).toFixed(1)%>
-    <% syndicateStakes = ((totalStakes * 0.05).toFixed(0))%>
-    <% breakEven = ((syndicateStakes/9000)*100).toFixed(1)%>
+    // <% breakEven = ((totalStakes/120000)*100).toFixed(1)%>
+    // <% syndicateStakes = ((totalStakes * 0.05).toFixed(0))%>
+    <% breakEven = ((syndicateStakes/9200)*100).toFixed(1)%>
     <% totalWinPlace = (((totalFirsts + totalSeconds + totalThirds)/totalStarts)*100).toFixed(0) %>
-    <%let pieData = [syndicateStakes, 9000-syndicateStakes] %>
+    <%let pieData = [syndicateStakes, 9200-syndicateStakes] %>
 
 <% let options = { timeZone: "Pacific/Auckland", hour: '2-digit', minute: '2-digit' } %>
 <% let newTime = new Date().toLocaleString("en-AU", options)
