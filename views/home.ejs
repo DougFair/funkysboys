@@ -19,11 +19,7 @@
     
     <% dogs.forEach(dog => {
         totalStakes = totalStakes + dog.stakes
-        
-        if(dog.name === "Bronski Beat"){
-            let calc = parseInt((dog.stakes* 0.1).toFixed(0))
-            syndicateStakes = syndicateStakes + calc
-        } else {
+  
             let calc = parseInt((dog.stakes* 0.05).toFixed(0))
             syndicateStakes = syndicateStakes + calc
         }
