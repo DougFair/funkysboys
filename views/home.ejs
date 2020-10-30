@@ -19,7 +19,6 @@
     
     <% dogs.forEach(dog => {
         totalStakes = totalStakes + dog.stakes
-  
             let calc = parseInt((dog.stakes* 0.05).toFixed(0))
             syndicateStakes = syndicateStakes + calc
         }
